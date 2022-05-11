@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <Graph :data="tempData" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Graph from './components/Graph.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Graph
+  },
+  data(){
+    return{
+       tempData: [
+        { date: "19-Sep-18", series1: 31, series2: 11 },
+        { date: "20-Sep-18", series1: 40, series2: 32 },
+        { date: "21-Sep-18", series1: 28, series2: 45 },
+        { date: "22-Sep-18", series1: 51, series2: 32 },
+        { date: "23-Sep-18", series1: 42, series2: 34 },
+        { date: "24-Sep-18", series1: 109, series2: 52 },
+        { date: "25-Sep-18", series1: 100, series2: 41 },
+      ],
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
